@@ -1,0 +1,28 @@
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+
+# .NET / backend
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# Bí mật (nếu sau này dùng mật khẩu/khóa API thì để ở đây, đừng commit)
+appsettings.Secrets.json
+secrets.json
+
+# Editor / hệ điều hành
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# Log
+*.log
+logs/

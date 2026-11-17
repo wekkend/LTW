@@ -1,0 +1,117 @@
+/* ========== 1. Cài đặt chung ========== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, Helvetica, sans-serif; line-height: 1.6; color: #222; background: #f5f6f8; }
+a { color: #1565c0; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-size: 1.8rem; margin-bottom: 8px; }
+h2 { font-size: 1.3rem; margin: 24px 0 12px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.main { padding-top: 20px; padding-bottom: 40px; min-height: 60vh; }
+.muted { color: #666; margin-bottom: 12px; }
+.empty { text-align: center; padding: 60px 0; color: #666; }
+.success { padding: 16px; background: #e8f5e9; border-radius: 8px; color: #1b5e20; }
+
+/* ========== 2. Nút ========== */
+.btn { display: inline-block; padding: 10px 22px; background: #e2231a; color: #fff; border: 0; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+.btn:hover { background: #c01b13; text-decoration: none; }
+.btn-outline { width: 100%; padding: 8px; background: #fff; border: 1px solid #bbb; border-radius: 6px; cursor: pointer; }
+.btn-outline:hover { background: #f0f0f0; }
+
+/* ========== 3. Header + menu ========== */
+.header { background: #fff; border-bottom: 1px solid #ddd; }
+.header-top { display: flex; align-items: center; gap: 24px; padding-top: 14px; padding-bottom: 14px; }
+.logo { font-size: 1.8rem; font-weight: 800; color: #111; letter-spacing: 1px; }
+.logo:hover { text-decoration: none; }
+.search { flex: 1; display: flex; max-width: 520px; }
+.search input { flex: 1; padding: 10px 14px; border: 1px solid #ccc; border-radius: 6px 0 0 6px; font-size: 1rem; }
+.search button { padding: 0 18px; border: 0; background: #111; color: #fff; border-radius: 0 6px 6px 0; cursor: pointer; }
+.hotline { margin-left: auto; font-size: 0.95rem; }
+.nav { background: #111; }
+.nav .container { display: flex; gap: 4px; }
+.nav a { color: #fff; padding: 12px 18px; }
+.nav a:hover { background: #333; text-decoration: none; }
+.nav a.active { background: #e2231a; }
+
+/* ========== 4. Trang chủ ========== */
+.hero { background: linear-gradient(135deg, #2b3a47, #11181f); color: #fff; padding: 56px 32px; border-radius: 10px; text-align: center; }
+.hero h1 { font-size: 2.2rem; }
+.hero p { margin: 8px 0 20px; color: #cfd8dc; }
+
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 20px; }
+.stat-card { background: #fff; border-radius: 10px; padding: 18px; text-align: center; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
+.stat-value { font-size: 2rem; font-weight: 700; color: #e2231a; }
+.stat-label { color: #555; }
+
+.series-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 16px; }
+.series-card { background: #fff; border-radius: 10px; padding: 14px; text-align: center; color: #222; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); transition: transform 0.15s; }
+.series-card:hover { transform: translateY(-3px); text-decoration: none; }
+.series-card h3 { color: #1565c0; margin: 10px 0 4px; font-size: 1rem; }
+.series-card p { font-size: 0.85rem; color: #666; }
+
+/* ========== 5. Ảnh (có khung thay thế khi chưa có ảnh) ========== */
+.thumb { display: block; width: 100%; height: 150px; object-fit: contain; border-radius: 6px; }
+.thumb-fallback { display: flex; align-items: center; justify-content: center; background: #e8eaed; color: #777; font-size: 0.85rem; text-align: center; padding: 8px; }
+
+/* ========== 6. Danh sách laptop ========== */
+.series-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 20px; }
+.series-tabs a { padding: 6px 14px; background: #fff; border: 1px solid #ccc; border-radius: 20px; color: #333; }
+.series-tabs a.active { background: #e2231a; border-color: #e2231a; color: #fff; }
+.series-tabs a:hover { text-decoration: none; }
+
+.list-layout { display: grid; grid-template-columns: 240px 1fr; gap: 24px; align-items: start; }
+.sidebar { background: #fff; border-radius: 10px; padding: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); }
+.filter-group { margin-bottom: 18px; }
+.filter-group h4 { margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #ddd; color: #555; }
+.filter-group label { display: flex; align-items: center; gap: 8px; padding: 3px 0; cursor: pointer; }
+
+.toolbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; color: #555; }
+.toolbar select { padding: 4px 8px; }
+
+.laptop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.laptop-card { background: #fff; border-radius: 10px; padding: 14px; color: #222; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); display: flex; flex-direction: column; gap: 6px; }
+.laptop-card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); text-decoration: none; }
+.laptop-card h3 { font-size: 1rem; }
+.spec { font-size: 0.85rem; color: #666; }
+.price { color: #e2231a; font-weight: 700; }
+.price.big { font-size: 1.5rem; margin: 6px 0; }
+
+.badge { align-self: flex-start; padding: 2px 10px; border-radius: 12px; font-size: 0.8rem; color: #fff; }
+.badge-available { background: #2e7d32; }
+.badge-borrowed { background: #ef6c00; }
+.badge-repairing { background: #c62828; }
+
+/* ========== 7. Chi tiết, bảng, form ========== */
+.detail { display: grid; grid-template-columns: 360px 1fr; gap: 28px; background: #fff; padding: 20px; border-radius: 10px; }
+.detail .thumb { height: 260px; }
+.spec-table { border-collapse: collapse; margin-top: 16px; width: 100%; max-width: 520px; background: #fff; }
+.spec-table.wide { max-width: none; }
+.spec-table th, .spec-table td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+.spec-table th { background: #f0f2f5; width: 140px; }
+
+.contact-form { display: flex; flex-direction: column; gap: 8px; max-width: 480px; margin-top: 12px; }
+.contact-form input, .contact-form textarea { padding: 10px; border: 1px solid #ccc; border-radius: 6px; font: inherit; }
+.contact-form .btn { align-self: flex-start; margin-top: 8px; }
+
+/* ========== 7b. Thông báo lỗi, nút nhỏ, trang quản lý ========== */
+.error { padding: 10px 14px; background: #ffebee; color: #b71c1c; border-radius: 6px; margin: 8px 0; }
+.contact-form select { padding: 10px; border: 1px solid #ccc; border-radius: 6px; font: inherit; background: #fff; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
+.btn-small { display: inline-block; padding: 5px 12px; background: #fff; border: 1px solid #bbb; border-radius: 6px; cursor: pointer; font-size: 0.9rem; color: #222; }
+.btn-small:hover { background: #f0f0f0; text-decoration: none; }
+.btn-small:disabled { opacity: 0.5; cursor: default; }
+.btn-small.danger { color: #c62828; border-color: #c62828; }
+.btn-small.danger:hover { background: #ffebee; }
+.page-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.admin-table td { vertical-align: middle; }
+.row-actions { white-space: nowrap; display: flex; gap: 6px; }
+
+/* ========== 8. Footer ========== */
+.footer { background: #111; color: #bbb; text-align: center; padding: 20px 0; font-size: 0.9rem; }
+
+/* ========== 9. Màn hình nhỏ (điện thoại) ========== */
+@media (max-width: 800px) {
+  .header-top { flex-wrap: wrap; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .list-layout, .detail { grid-template-columns: 1fr; }
+}
